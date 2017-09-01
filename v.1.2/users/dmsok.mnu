@@ -1,0 +1,13 @@
+﻿{
+main:
+{
+init: {deferred: window.LoginCheck},
+0: {text: '', file: ''},
+7: {text: 'Настройки', file: function(p, pp){HostSetup(p, pp)}},
+8: {text: 'Журналы', file: ''},
+81: {text: 'host', file: function(p){Host(Log, {parent: p, dir: '/data/log/', page: ''})}, refresh: true},
+82: {text: 'test/test', file: function(p){Host(Log, {parent: p, dir: '/data/log/', page: '/test'})}, refresh: true},
+83: {text: 'test/test.php', file: function(p){Host(Log, {parent: p, dir: '/data/log/', page: '/test/test.php'})}, refresh: true},
+9: {text: 'dmsok.ru', file: function(p){$('<a>', {href: '/test/www.rar', text: 'dmsok.ru.rar'}).appendTo(p)}}
+}
+}

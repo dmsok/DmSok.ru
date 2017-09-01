@@ -1,0 +1,51 @@
+﻿{
+job:
+{
+init: {menu_id: 'main', page_id: 'main', deferred: window.LoginCheck, after_change: ChangeCitation,
+    citat: 3, citat_css: {citat: {'font-style': 'italic', 'font-weight': 'bold', 'font-size': '1em', 'text-align': 'justify'}, sign: {'font-size': '0.8em'}}
+},
+
+0: {text: '', file: ''},
+1: {text: 'Для работодателя', file: '', action: {showSection: true, defaultPage: 11}, css: {color: 'red'}},
+11: {text: 'Меню и история браузера', file: 'lib/jmenu.js', type: 'code', before: ScriptForJob_B, after: ScriptForJob_A}
+//12: {text: 'Гостевая - JS', file: 'lib/gbook.js', type: 'code', before: ScriptForJob_B, after: ScriptForJob_A},
+//13: {text: 'Гостевая - PHP', file: 'test/gbook_php.txt', type: 'code', before: ScriptForJob_B, after: ScriptForJob_A}
+}
+, test:
+{
+init: {menu_id: 'main', page_id: 'main', deferred: window.LoginCheck,
+    plus:  {'background-image': 'url(image/plus.gif)', 'background-repeat': 'no-repeat'},
+    minus: {'background-image': 'url(image/minus.gif)', 'background-repeat': 'no-repeat'}},
+
+0: {text: 'Работа', file: ''},
+1: {text: 'Для работодателя', file: '', css: {color: 'red'}},
+11: {text: 'Резюме', file: function(p){ResumeForJob(p)}},
+12: {text: 'Скрипты', file: ''},
+121: {text: 'JavaScript', file: 'lib/gbook.js', type: 'code', before: ScriptForJob_B, after: ScriptForJob_A},
+122: {text: 'PHP', file: ''/*function(p){ScriptForJobPHP(p)}*/},
+
+3: {text: 'Работа 3)', file: '', type: 'txt+p', line_sign: '(-3-', before: function(p){$(p).addClass('page')}},
+31: {text: 'Работа 31)', line_sign: '(-31-', file: 'lib/gbook.js', type: 'code', reload: true, before: ScriptForJob_B/*, after: ScriptForJob_A function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}*/},
+/*31: {text: 'Работа 31)', line_sign: '(-31-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},*/
+311: {text: 'Работа 311)', line_sign: '(-311-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+312: {text: 'Работа 312)', line_sign: '(-312-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+313: {text: 'Работа 313)', line_sign: '(-313-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+32: {text: 'Работа 32)', line_sign: '(-32-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+321: {text: 'Работа 321)', line_sign: '(-321-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+322: {text: 'Работа 322)', line_sign: '(-322-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+33: {text: 'Работа 33)', line_sign: '(-33-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+331: {text: 'Работа 331)', line_sign: '(-331-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+3311: {text: 'Работа 3311)', line_sign: '(-3311-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+332: {text: 'Работа 332)', line_sign: '(-332-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+3321: {text: 'Работа 3321)', line_sign: '(-3321-', file: 'lib/gbook.js', type: 'code', reload: true, before: ScriptForJob_B, after: ScriptForJob_A/*function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}*/},
+3322: {text: 'Работа 3322)', line_sign: '(-3322-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+33221: {text: 'Работа 33221)', line_sign: '(-33221-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+33222: {text: 'Работа 33222)', line_sign: '(-33222-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+33223: {text: 'Работа 33223)', line_sign: '(-33223-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+3323: {text: 'Работа 3323)', line_sign: '(-3323-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+33231: {text: 'Работа 33231)', line_sign: '(-33231-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+332311: {text: 'Работа 332311)', line_sign: '(-332311-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+3323111: {text: 'Работа 3323111)', line_sign: '(-3323111-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}}
+
+}
+}

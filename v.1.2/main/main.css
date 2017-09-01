@@ -1,0 +1,54 @@
+﻿html {overflow-y: scroll;}
+body {background-image: url(../image/logo/fon06.png); background-attachment: fixed;}
+body {background-color: transparent; margin: 0 1em;}
+#top {margin-bottom: 1ex;}
+#bottom {margin-top: 10ex; font-weight: bold; font-size: 0.8em;}
+#header, #menu > div > div > div > div, .page, #bottom span {background-color: #DCDCDC; border: 1px solid black;}
+#header, #bottom span {border-radius: 1ex 2em; padding: 1ex 1em;}
+#menu > div > div > div > div {border-radius: 1ex 2em; padding: 1ex 1em; margin-bottom: 1ex;}
+.page {border-radius: 1ex 2em; padding: 1ex 1em; margin-bottom: 2ex;}
+#left {width: 17em;}
+#center {margin-left: 19em;}
+#menu > div > div > div div:hover {cursor: pointer;}
+#menu > div > div > div span:hover {font-weight: bold;}
+#menu > div > div > div span.backlight {font-weight: bold;}
+#login input {background-color: #DCDCDC;}
+a:link {color: black;}
+a:visited {color: black/*#696969*/;}
+a {outline: none;}
+
+.code {font-family: /*Lucida Console, Consolas, */Courier New, Courier, monospace; font-size: 0.8em; background-color: #C0C0C0; margin: 1ex 1em; padding: 1ex 1em;}
+.code .sign {color: red;}
+.code .string {color: navy;}
+.code .regexp {color: teal;}
+.code .digit {color: purple;}
+.code .oper {color: blue; font-weight: bold;}
+.code .comment {color: green; font-style: italic;}
+
+.news {padding: 0 2em 2ex;}
+.news figure {margin: 2ex 2em;}
+.news figcaption {text-align: center; font-size: 0.7em;}
+.news > h3 {text-align: center; cursor: pointer;}
+.news > div div {text-align: center;}
+.news p {margin: 1ex 0; text-align: justify; text-indent: 1.5em;}
+.news h6 {margin: 0; text-align: right; font-style: italic; font-size: 0.8em;}
+.news .p {text-align: justify; text-indent: 1.5em;}
+
+.stories {padding: 2ex 2em;}
+.stories a {color: navy;}
+.stories .comment {margin: 0;}
+.stories .link {margin: 1ex 0 0; padding-left: 2em; text-align: right; font-size: 0.9em;}
+.stories .author {margin: 1ex 0 0; padding-left: 2em; font-style: italic; font-size: 3ex;}
+.stories .title {margin-bottom: 4ex; text-align: center; font-weight: bold; font-size: 3ex;}
+.stories .text {margin: 0; text-align: justify; text-indent: 1.5em;}
+
+.links .title {margin-bottom: 1ex;}
+.links .title a {text-decoration: none;}
+.links .title a:hover {text-decoration: underline;}
+.links .title a span {font-style: italic;}
+
+.gbw-main {}
+.gbw-main a:link, .gbw-main a:visited {color: black;}
+.gbw-main-message {font-weight: bold; margin-bottom: 0.5ex;}
+.gbw-main-sign {font-style: italic;}
+.gbw-main-date {font-size: 0.9em;}

@@ -1,0 +1,73 @@
+﻿{
+main:
+{
+init: {menu_id: 'main', page_id: 'main', deferred: window.LoginCheck, after_change: ChangeCitation,
+    citat: 1, citat_css: {citat: {'font-style': 'italic', 'font-weight': 'bold', 'font-size': '1.2em', 'text-align': 'justify'}, sign: {'font-size': '0.8em'}}
+},
+
+0: {text: '', file: '', before: function(parent, page, event, ajax){}, after: function(parent, page, event, ajax){}},
+1: {text: 'Главная', file: 'main/main.js', safety: true},
+2: {text: 'Разделы', file: ''},
+//21: {text: 'Политика', file: 'pages/policy.js', citat: 4, safety: true},
+22: {text: 'Юмор', file: 'pages/humor.js', safety: true},
+23: {text: 'Технологии', file: 'pages/technology.js', safety: true},
+24: {text: 'Футбол', file: 'pages/football.js', safety: true},
+25: {text: 'Music', file: 'pages/music.js', safety: true},
+28: {text: 'Рассказы', file: ''},
+281: {text: 'Мясо в космосе', file: 'pages/meat.txt', type: 'txt+p', after: function(p){Stories($(p).children().last().addClass('page'))}},
+282: {text: 'Совещание', file: 'pages/conference.txt', type: 'txt+p', after: function(p){Stories($(p).children().last().addClass('page'))}},
+283: {text: 'Бугай', file: 'pages/bull.txt', type: 'txt+p', after: function(p){Stories($(p).children().last().addClass('page'))}},
+7: {text: 'Гостевая', refresh: true, citat: 5, file: function(p){if (window.GuestBookR){
+    GuestBookR({file: 'lib/gbook.php', name: '../data/gbook/main.gb', parent: p, parentw: p, gb: 'main', reload: [,1], size: {mw: 100}, revers: true,
+        mailto: 'dmsok@yandex.ru', strong: false}); $('#gb-main, #gbw-main').addClass('page')}}},
+//8: {text: 'Ссылки', file: ''},
+//81: {text: 'JavaScript & PHP & HTML', file: 'pages/web.lnk', type: 'html', after: function(p){Links($(p).children().last().addClass('page'))}},
+//87: {text: 'Разное', file: '', type: 'txt+p', before: function(p,t,t,a){$(p).addClass('page').addClass('code')}/*ScriptForJob_B*/, after: JSBacklight}
+}
+, test:
+{
+init: {menu_id: 'main', page_id: 'main', deferred: window.LoginCheck, history: '',
+    plus:  {'background-image': 'url(image/plus.gif)', 'background-repeat': 'no-repeat'},
+    minus: {'background-image': 'url(image/minus.gif)', 'background-repeat': 'no-repeat'},
+        always_before: function(parent, page, event){}, always_after: function(parent, page, event){}},
+
+0: {text: 'Меню', file: '', before: function(parent, page, event, data, status, jqxhr){}, after: function(parent, page, event, data, status, jqxhr){}},
+1: {text: 'Главная 1)', file: 'main/main.js', safety: true, line_sign: '(-1-'},
+11: {text: 'Главная 11)', line_sign: '(-11-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+111: {text: 'Главная 111)', line_sign: '(-111-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+112: {text: 'Главная 112)', line_sign: '(-112-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+113: {text: 'Главная 113)', line_sign: '(-113-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+12: {text: 'Главная 12)', line_sign: '(-12-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+121: {text: 'Главная 121)', line_sign: '(-121-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+122: {text: 'Главная 122)', line_sign: '(-122-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+13: {text: 'Главная 13)', line_sign: '(-13-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+131: {text: 'Главная 131)', line_sign: '(-131-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+1311: {text: 'Главная 1311)', line_sign: '(-1311-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+132: {text: 'Главная 132)', line_sign: '(-132-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+1321: {text: 'Главная 1321)', line_sign: '(-1321-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+1322: {text: 'Главная 1322)', line_sign: '(-1322-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+13221: {text: 'Главная 13221)', line_sign: '(-13221-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+13222: {text: 'Главная 13222)', line_sign: '(-13222-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+13223: {text: 'Главная 13223)', line_sign: '(-13223-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+1323: {text: 'Главная 1323)', line_sign: '(-1323-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+13231: {text: 'Главная 13231)', line_sign: '(-13231-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+132311: {text: 'Главная 132311)', line_sign: '(-132311-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+1323111: {text: 'Главная 1323111)', line_sign: '(-1323111-', file: 'test/test.txt', type: 'txt', reload: true, before: function(p,pp,e,a){$(p).addClass('page');a.data='Страница\n'+pp.n+'\n-----'}},
+/*1: {text: 'Главная', file: 'main/main.js', safety: true, line_sign: '------'},
+1: {text: 'Главная', file: 'main/main.js', safety: true, line_sign: '------'},
+1: {text: 'Главная', file: 'main/main.js', safety: true, line_sign: '------'},*/
+2: {text: 'Статьи', file: ''},
+21: {text: 'Политика', file: 'pages/pages.js', after: function(){Policy.apply(null, arguments)}},
+22: {text: 'Юмор', file: 'pages/pages.js', after: function(){Humor.apply(null, arguments)}},
+7: {text: 'Гостевая', refresh: true, file: function(p){if (window.GuestBookR){
+    GuestBookR({file: 'lib/gbook.php', name: '../data/gbook/main.gb', parent: p, parentw: p, gb: 'main', reload: [,1], size: {mw: 100}, revers: true,
+        mailto: 'mail@dmsok.ru', strong: false}); $('#gb-main, #gbw-main').addClass('page')}}},
+8: {text: 'Ссылки', file: ''},
+81: {text: 'JavaScript & PHP & HTML', file: ''},
+87: {text: 'Разное test.txt', file: 'test/test.txt', type: 'txt', before: function(p,t,t,a){$(p).addClass('page').addClass('code')}, after: JSBacklight},
+88: {text: 'Разное jvmenu', file: 'lib/jmenu.js', type: 'code', before: function(p,t,t,a){$(p).addClass('page').addClass('code')}, after: JSBacklight},
+89: {text: 'Разное 2', file: 'test/test1.txt', type: 'code', before: function(p,t,t,a){$(p).addClass('page'); trace(a);
+    a.data='1\n   2\n3\n\n \n   \n	\n8\n 9'},
+always_before: function(p,pp,t,a){if(!window.tt){window.tt=1}else{window.tt=window.tt+1};if(window.tt==3||window.tt==5){pp.reload=true; /*pp.append=true*/}}}
+}
+}

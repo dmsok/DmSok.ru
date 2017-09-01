@@ -1,0 +1,36 @@
+.jtrace-title {position: fixed; top: 10px; right: 20px; z-index: 100; opacity: 1;}
+
+div.jt-debug, div.jt-stack, div.jt-config {border: black solid 2px;}
+
+div.jt-debug, div.jt-stack {font-family: Courier New, Courier, Monospace; font-size: 1em;}
+
+.jt-debug {position: fixed; top: 42px; right: 20px; width: 450px; opacity: 0.7; padding: 2px;}
+
+.jt-stack {padding: 5px;}
+
+.jt-config {position: fixed; top: 42px; right: 20px; z-index: 100; padding: 0px 4px;}
+
+.jt-sep {border-bottom: black solid 1px; padding: 4px 0px; text-align: center}
+
+div.jt-title, div.jt-tool, div.jt-data {border: black solid 1px;}
+
+.jt-title {text-align: center; margin-bottom: 2px; font-weight: bold}
+.jt-tool {margin-bottom: 2px;}
+.jt-data {height: 400px; overflow: hidden; padding: 2px;}
+.jt-wleft, .jt-right {vertical-align: middle; padding-left: 0.5em; padding-right: 0.5em; cursor: pointer}
+
+.jt-scroll{overflow: auto}
+.jt-table {width: 100%;table-layout: fixed; border-collapse: collapse;}
+.jt-table td, .jt-table th {border: #808080 solid 1px; overflow: hidden}
+.jt-col0 {width: 3em; text-align: right}
+.jt-col1 {}
+.jt-col2 {width: 6em; text-align: center}
+.jt-col3 {width: 8em;}
+
+.jt-green {color: lime;}
+.jt-darkgreen {color: #00FF7F}
+.jt-red {color: red;}
+.jt-blue {color: #000080;}
+.jt-mark {color: black; background-color: #C0C0C0;}
+.jt-back {background-color: #696969;}
+.jt-blue a:link, .jt-blue a:visited {color: #000080;}

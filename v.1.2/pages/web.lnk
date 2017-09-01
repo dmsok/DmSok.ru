@@ -1,0 +1,32 @@
+<div>
+    <div>
+        <a>http://www.htmlbook.ru</a>
+        <span> - Учебники по HTML, CSS, дизайну, графике и созданию сайтов.</span>
+        <div></div>
+    </div>
+    <div>
+        <a>http://js-book.org.ua/index.html</a>
+        <span> - Справочник по JavaScript.</span>
+        <div></div>
+    </div>
+    <div>
+        <a>http://javascript.ru</a>
+        <span> - Javascript-ресурс. Учебник с примерами скриптов. Форум. Книги и многое другое.</span>
+        <div></div>
+    </div>
+    <div>
+        <a>http://api.jquery.com</a>
+        <span> - jQuery JavaScript Library.</span>
+        <div></div>
+    </div>
+    <div>
+        <a>http://www.php.ru/manual</a>
+        <span> - Руководство по PHP.</span>
+        <div></div>
+    </div>
+    <div>
+        <a>http://mysql.ru/docs/man/Reference.html</a>
+        <span> - Справочное руководство по MySQL.</span>
+        <div></div>
+    </div>
+</div>
